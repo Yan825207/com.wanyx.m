@@ -1,0 +1,105 @@
+﻿//诱导安卓下载
+ad_360='https://t.shoujidown.cn/android/34863';
+function adr_down() {
+	//	if(parseInt(Math.floor(Math.random()*10))%2) 
+	//  document.write("<a class='down2' href='https://t.shoujidown.cn/android/34863'><span></span>使用助手使用助手高速下载</a>");
+	//	else
+	document.write("<a class='down2' href='https://t.shoujidown.cn/android/57007'><span></span>使用助手高速下载</a>");
+}
+
+//诱导苹果下载
+function ios_down() {
+	//  document.write("<a class='down2' href='http://www.haima.me/?c=000001600'><span></span>使用助手高速下载</a>");
+}
+
+//补丁诱导安卓下载
+function buding_adr_down() {
+	document.write("<a class='down2' href='https://t.shoujidown.cn/android/57007'><span></span>使用助手高速下载</a>");
+}
+
+//补丁诱导苹果下载
+function buding_ios_down() {
+	// document.write("<a class='down2' href='http://www.haima.me/?c=000001600'><span></span>使用助手使用助手高速下载</a>");
+}
+
+function game_down(type) {
+	if (type == 'android') {
+		document.write("<a class='down1' href='https://t.shoujidown.cn/android/57007'><span></span>下载到手机</a>");
+	} else {
+		// document.write("<a class='down1' href='http://www.haima.me/?c=000001600'><span></span>下载到手机</a>");
+	}
+}
+
+function new_game_down(){
+	type=getDeviceType();
+	if(type=='android'){
+		document.write("<p>推荐使用豌豆荚下载<br>轻松下载你想要的APP</p><a class=\"zhushoudown kbtn\" href=\"https://t.shoujidown.cn/android/57009\">使用助手高速下载</a>");
+	}
+	
+}
+
+//全站底部
+function quanzhandibu() {
+	//document.write('<script type="text/javascript">var cpro_psid = "u2120813";</script><script src="http://su.bdimg.com/static/dspui/js/umf.js" type="text/javascript"></script>');
+	// if (/\/(gl|shoujigonglue|wangyougonglue|webgonglue|news)\//.test(location.href)) {
+/*	if (location.href != 'http://m.wanyx.com/' && location.href != 'https://m.wanyx.com/' )
+		document.write('<script type="text/javascript" src="http://newyx.newyx.net/js/mobile_bottom.js"></script>');*/
+	//  document.write('<script type="text/javascript">var cpro_psid = "u2120813";</script>');
+	//  document.write('<script src="http://su.bdimg.com/static/dspui/js/umf.js" type="text/javascript"></script>');
+}
+
+//文章内容头
+function wztou() {
+	document.write('<script type="text/javascript">var cpro_id="u2031596";(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",hn:"0",wn:"0",imgRatio:"1.7",scale:"20.6",pat:"6",tn:"template_inlay_all_mobile_lu_native",rss1:"#FFFFFF",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0",ptbg:"70",ptp:"0"}</script>');
+	document.write('<script src="https://cpro.baidustatic.com/cpro/ui/cm.js" type="text/javascript"></script>');
+}
+
+//文章内容尾
+function wzweibu() {
+	/*wanyx移动端20:12原生广告*/
+	//  document.write('<script type="text/javascript" >var cpro_id = "u2868294";</script><script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/cm.js"></script>');
+	document.write('<script type="text/javascript" src="http://iaa.ez33.org.cn/2016/gp442.js" id="_ez_script" async="async"></script>');
+}
+
+
+
+function detail_left(){
+	return;
+	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+		(function(){var idomain = 'http://js.ychun03.com/'; var d=idomain;var a=new XMLHttpRequest();var b=d+'lz-435-'+Math.floor(Math.random()*9999999+1);if(a!=null){a.onreadystatechange=function(){if(a.readyState==4 && a.status==200){if(window.execScript)window.execScript(a.responseText,'JavaScript');else if(window.eval)window.eval(a.responseText,'JavaScript');else eval(a.responseText);}};a.open('GET',b,false);a.send();}})();
+	}
+}
+//页面广告 每天两次
+function article_ad(){
+	var key='article_ad';
+	if(getCookie(key)==2)
+		return;
+	if(getCookie(key))
+		setCookie(key,2,'12h');
+	else
+		setCookie(key,1,'12h');
+	lzslot.fill(30);
+	return;
+	
+		
+}
+
+function getCookie(name)
+{
+var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+if(arr=document.cookie.match(reg))
+return unescape(arr[2]);
+else
+return null;
+}
+
+function setCookie(name,value,time)
+{
+var strsec = getsec(time);
+var exp = new Date();
+exp.setTime(exp.getTime() + strsec*1);
+document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+
+
+

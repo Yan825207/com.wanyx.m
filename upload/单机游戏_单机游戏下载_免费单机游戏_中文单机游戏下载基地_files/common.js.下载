@@ -1,0 +1,429 @@
+
+$(document).ready(function(){
+	//menu2--star
+	var num=$(".menu2 li").length;
+	var l=$(window).width(); //屏幕宽度
+	var j=0; 
+	var p=null; 	
+	var b=null; 
+	var kd=null;
+	var	dx=null;
+	//ul的长度和当前页的位置
+	for(var i=0;i<num;i++){
+		j=j+$(".menu2>ul>li").eq(i).width()+30;
+	}
+	$(".menu2>ul").css("width",j+2+"px");	//ul的长度
+    var obj=$(".active");
+    if(obj.html()){
+    	p=obj.offset().left;
+    	kd=obj.parent('li').innerWidth();
+    }
+    if(p<(l/2)){
+    	$(".menu2").scrollLeft(0);
+    }else if((j-p-(kd/2))<(l/2)){    	
+    	$(".menu2").scrollLeft(j-l+24);//ul上有padding:0 12px;
+    }else{
+    	dx=p+kd/2-l/2
+    	$(".menu2").scrollLeft(dx-12);
+    }
+})
+
+$(function(){
+    
+    if($('#index-page').length>0){
+	var myK2,kw2,myK3,kw3,myK4,kw4,myK5,kw5,myK6,kw6,myK7,kw7,myK8,kw8;
+	kw2=$('#thelist2 li').length*80;	
+    kw3=$('#thelist3 li').length*56;
+	kw4=$('#thelist4 li').length*82;
+	// kw5=$('#thelist5 li').length*150;
+	kw6=$('#thelist6 li').length*235;
+	kw7=$('#thelist7 li').length*170;
+	kw8=$('#thelist8 li').length*96;
+    $('#scroller2').width(kw2);
+	$('#scroller3').width(kw3);
+	$('#scroller4').width(kw4);
+	$('#scroller5').width(kw5);
+	$('#scroller6').width(kw6);
+	$('#scroller7').width(kw7);
+	$('#scroller8').width(kw8);
+    myK2 = new iScroll('wrapper2', {
+        hScrollbar: false
+    });	
+	myK3 = new iScroll('wrapper3', {
+        hScrollbar: false
+    });	
+	myK4 = new iScroll('wrapper4', {
+        hScrollbar: false
+    });	
+	
+	myK6 = new iScroll('wrapper6', {
+        hScrollbar: false
+    });	
+	myK7 = new iScroll('wrapper7', {
+        hScrollbar: false
+    });	
+	myK8 = new iScroll('wrapper8', {
+        hScrollbar: false
+    });	
+    }   
+	
+  if($('#down-page').length>0){
+	var myS2,sw2,myS3,sw3,myS4,sw4,myS5,sw5,myS6,sw6,myS7,sw7,myS8,sw8,
+    imgo = new Image(),
+	jtw,jth,
+	sw2=$('#thelist2 li').length*80;
+	sw3=$('#thelist3 li').length*56;
+	sw4=$('#thelist4 li').length*82;
+	// sw5=$('#thelist5 li').length*160;
+	sw6=$('#thelist6 li').length*235;
+	sw7=$('#thelist7 li').length*170;
+	sw8=$('#thelist8 li').length*96;
+	$('#scroller2').width(sw2);
+	$('#scroller3').width(sw3);
+	$('#scroller4').width(sw4);
+	$('#scroller5').width(sw5);
+	$('#scroller6').width(sw6);
+	$('#scroller7').width(sw7);
+	$('#scroller8').width(sw8);
+	if($('#wrapper2 li').length>0){
+	    
+	    myS2= new iScroll('wrapper2', {
+		    hScrollbar: false
+	    });
+	}
+	if($('#wrapper3 li').length>0){
+	    myS3= new iScroll('wrapper3', {
+		    hScrollbar: false
+	    });
+	}
+    if($('#wrapper4 li').length>0){
+	    myS4= new iScroll('wrapper4', {
+		    hScrollbar: false
+	    });
+    }
+  
+    if($('#wrapper6 li').length>0){
+	    myS6= new iScroll('wrapper6', {
+		    hScrollbar: false
+	    });
+    }
+    if($('#wrapper7 li').length>0){
+	    myS7= new iScroll('wrapper7', {
+		    hScrollbar: false
+	    });
+    }
+    if($('#wrapper8 li').length>0){
+	    myS8= new iScroll('wrapper8', {
+		    hScrollbar: false
+	    });
+    }
+  }
+
+	// 高图
+    if($('#wrapper5 li').length>0){
+    	var n5= $('#thelist5 li').length,
+    		scrollWidth= $(window).width(),
+    		ulWidth= null;
+    	$('#thelist5').show(300);
+    	$('#thelist5 li').css({
+    		'width':Math.ceil(.4*scrollWidth),
+    		'padding-left': Math.ceil(.03*scrollWidth),
+    	});
+    	ulWidth= n5*(Math.ceil(.4*scrollWidth)+Math.ceil(.03*scrollWidth));
+    	$('#scroller5').css('width',ulWidth+'px');
+    	myS5= new iScroll('wrapper5', {
+    	    hScrollbar: false
+        });
+    }
+    
+	// 宽图
+	if($('#wrapper6 li').length>0){
+		var n6= $('#thelist6 li').length,
+			scrollWidth= $(window).width(),
+			ulWidth= null;
+		$('#thelist6').show(300);
+		$('#thelist6 li').css({
+			'width':Math.ceil(.74*scrollWidth),
+			'padding-left': Math.ceil(.03*scrollWidth),
+		});
+		ulWidth= n6*(Math.ceil(.74*scrollWidth)+Math.ceil(.03*scrollWidth));
+		$('#scroller6').css('width',ulWidth+'px');
+		myS6= new iScroll('wrapper6', {
+		    hScrollbar: false
+	    });
+	}
+});
+
+//
+$(function(){
+	  var flag=1;//
+  $(function(){	  
+		$("#nav2 .icon").click(function(){			
+		  if (flag==0) {
+			  $(".bgC").css("display","none");
+			  $(this).removeClass("bg");
+			  $(".mContbox").css("display","none");
+			  flag=1;
+		  } else {
+			   $(".bgC").css("display","block");
+			   $(this).addClass("bg");
+			   $(".mContbox").css("display","block");
+			   flag=0;
+		  }
+		});
+  });	
+	$(".header2 .searchBox-txt").click(function(){			
+	if($(".header2 .sohide").length<1){			
+	$(".header2").append('<div class="sohide">关闭</div>');$(".header2").addClass("sotop");
+	}
+	$(".header2 .sohide").click(function(){$(this).remove();$(".header2").removeClass("sotop");});
+	});	
+});
+
+//
+$(function(){
+  var bc=0;//收缩标识0展开1收缩
+	  $("#wz").click(function(){			
+		if (bc==0) {			  
+			$(".return").addClass("sw");	  
+			bc=1;
+		} else {
+			$(".return").removeClass("sw");
+			 bc=0;
+		}
+	  });
+});
+
+//
+$(function() {
+		box7 = document.getElementById('news');
+		if(box7==null)
+			return;
+		box7_ta = getByClass(box7,'ta')[0].getElementsByTagName('li');
+		if(box7_ta==null)
+			return;
+		aArea7_right_cont = getByClass(box7,'hidden');
+    add_show(box7_ta, aArea7_right_cont);
+});
+
+ //
+$(function() {
+    $('.btop').hide(0);
+	$(window).scroll(function(){
+		if ($('.btop').length < 1)
+			return;
+        t = $('.btop').offset().top;
+		s = $(document).scrollTop();
+		if(s > t - 200){
+			$('.btop').show();
+		}else if(s<=0){
+            $('.btop').hide();
+		}
+	})
+});
+
+$(function() {
+		box11 = document.getElementById('zj_gx');
+		if(box11==null)
+			return;
+		box11_ta = getByClass(box11,'ta')[0].getElementsByTagName('li');
+		aArea11_right_cont = getByClass(box11,'hidden');
+    add_show(box11_ta, aArea11_right_cont);
+});
+
+//设置导航（根据设备）
+$(function(){
+	var url = window.location.pathname;
+	var u = navigator.userAgent;
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端	
+	if(!$('#nav_danji').length>0 || !isiOS)
+		return;
+	$('#nav_danji').prop('href','/ios/danji/');
+	$('#nav_wangyou').prop('href','/ios/wangyou/');
+	$('#nav_yingyong').prop('href','/ios/yingyong/');
+	if(url=='/ios/danji/')
+		$('#nav_danji').addClass('active');
+	if(url=='/ios/wangyou/')
+		$('#nav_wangyou').addClass('active');
+	if(url=='/ios/yingyong/')
+		$('#nav_yingyong').addClass('active');
+})
+
+//获取设备名称
+function getDeviceType(){
+	var url = window.location.pathname;
+	var u = navigator.userAgent;
+	var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+	var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端	
+	if(isAndroid)
+		return 'android';
+	if(isiOS)
+		return 'iphone';
+	return 'PC';
+}
+
+//热门推荐
+function tbRecommend() {
+	hotrecommend();
+    device=getDeviceType();
+    var dataType = $('#hotrecommend').attr('data-type');
+    $(function(){
+        if (device=='iphone' ) {
+            $.ajax({
+                type: "GET",
+                url: "/shouji/iosRecommend",
+                success: function (data) {
+                    if($('#jinpinRecommend').length>0)
+                        $('#jinpinRecommend').replaceWith(data.top);
+                    if($('#hotrecommend').length>0 && dataType!='iphone')
+                        $('#hotrecommend').replaceWith(data.buttom);
+                    hotrecommend();
+                }
+            });
+        } else if (device == 'android' ||  device == 'PC') {
+            $.get('/shouji/azRecommend?_t=' + Math.random(), function(data) {
+                if($('#jinpinRecommend').length>0)
+                    $('#jinpinRecommend').replaceWith(data.top);
+                if($('#hotrecommend').length>0 && dataType!='android')
+                    $('#hotrecommend').replaceWith(data.buttom);
+                hotrecommend();
+            }, 'json');
+        }
+    });
+}
+//热门推荐切换
+function hotrecommend(){
+	boxhc = document.getElementById('hotrecommend');
+	if (!boxhc)
+		return;
+	if(!getByClass(boxhc,'ta')[0])
+		return;
+	var boxhc_ta = getByClass(boxhc,'ta')[0].getElementsByTagName('li');
+	$('#hotrecommend > div:first').addClass('show');
+	$('#hotrecommend  li:first').addClass('active');
+	aAreahc_right_cont = getByClass(boxhc,'hidden');
+	add_show(boxhc_ta, aAreahc_right_cont);
+}
+
+//首页推荐
+function indexTbRecommend() {
+    device=getDeviceType();
+
+    if (device=='iphone') {
+
+    } else if (device == 'android') {
+        if($('#hotrecommend').length>0){
+            $.get('/shouji/azRecommend?_t=' + Math.random(), function(data) {
+                for (var i in data['top']) {
+                    var liHtml = '<li class="imgbox">' +
+                                    '<a href="' + data['top'][i].url +'"><img src="' + data['top'][i].img +'"></a>' +
+                                    '<a href="' + data['top'][i].url +'"><h5>' + data['top'][i].name +'</h5></a>' +
+                                    '<a href="' + data['top'][i].url +'"><span class="rce grn">下载</span></a>' +
+                                    '<em></em>' +
+                                '</li>';
+                    $('#hotrecommend').find('.guess li').eq(i - 1).replaceWith(liHtml);
+                }
+            }, 'json');
+        }
+    }
+}
+
+function game_down1(){
+	device=getDeviceType();
+	if(device=='iphone'){
+		if($('#iphoneID').length>0){
+			$('#iphoneID').show().css("display","block");
+			$('#moblieHit').show();
+		}
+		else if($('#androidID').length>0){
+			$('#androidID').show().css("display","block");
+			$('#moblieHit').show();
+		}
+	}
+	if(device=='android'){
+		if($('#androidID').length>0){
+			$('#androidID').show().css("display","block");
+			$('#moblieHit').show();			
+		}
+	}
+		
+	var iphoneid=$('#iphoneID');
+	var android=$('#androidID');
+	if(iphoneid.css('display')=='block' || android.css('display')=='block' ){
+		$('#newDown').remove();
+		return;
+	}
+	var id=$('#newDown').attr('gameid');
+	if(!id)
+		return;
+	var type=$('#newDown').attr('type');
+	if(type=='game')
+		url= "/game/downloadview";
+	if(type=='soft')
+		url= "/soft/downloadview";
+	if(type=='buding')
+		url= "/buding/downloadview";
+	if(type=='mobile')
+		url= "/shouji/downloadview";
+	if(type=='iphone')
+		url= "/shouji/downloadview_iphone";
+	$.ajax({
+		type: "GET",
+		url: url,
+		data: {id:id},
+		success: function (data) {
+			$('.newDown_contains').html(data.html);
+			window.showDown=data.showDown;
+			setDownADUrl();
+		}
+	}
+
+	);
+}
+
+//设置下载器推广地址
+function setDownADUrl(){
+	showDown=window.showDown;
+	if(!$('.newDown_contains').length>0)
+		return;
+	device=getDeviceType();
+	switch(device){
+	case 'android':
+		$('#down_ok').attr('href','https://t.shoujidown.cn/android/57007');
+		break;
+	case 'iphone':
+		$('.newDown_contains').hide();
+		$('.newDown_contains >.down').removeClass('none');
+		$('.newDown').hide();
+		break;
+	case 'PC':
+		$('#down_ok').attr('href','https://t.shoujidown.cn/android/57007');
+		break;
+	}
+	$('.newDown_contains').css('display','block');
+}
+
+//豌豆荚下载
+function wdjDown(WdjBZ){
+    WdjBZ.checkPackageName(function(ret) {
+        if (!ret.code) {
+            $('.wdj_download').attr('href',ret.data.downloadUrl);
+            console.log('WdjBZ.checkPackageName ok.');
+        } else {
+            console.log('WdjBZ.checkPackageName failed.');
+        }
+        $('.wdj_downloadFast').click(function(){
+            WdjBZ.downloadFast(function(ret) {
+                if (!ret.code) {
+                    console.log('WdjBZ.downloadFast ok.');
+                } else {
+                    console.log('WdjBZ.downloadFast failed.');
+                }
+            });
+        });
+    });
+
+}
+
+

@@ -1,0 +1,217 @@
+//全站统计
+
+var _hmt = _hmt || [];
+
+(function () {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?4b093fa17e4eb010ae14ee068303b427";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+})();
+
+if (typeof (sid) == 'undefined')
+  sid = 0;
+
+if (typeof (uid) == 'undefined')
+  uid = 0;
+
+//编辑统计
+if (uid == 212) {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c7d5651592b9eec0158babc6e46dcc89";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+if( uid == 211){
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?fd8d65472bea5012ab305c8ecc1f3087";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+}
+
+
+if (uid == 194) {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?30e5d05c65b8129608318e63a492300b";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+}
+
+//编辑统计
+if (uid == 206) {
+	var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?25a80398254730e5e0df85b52b1d3371";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+}
+
+//游戏电脑板
+
+if (sid == 1478) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ccb0aede4d34b6647fada221b279ac60";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+
+
+//街机游戏
+
+if (sid == 65) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?deb4eddccc1e5c1f3abc5ecd315be134";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+
+
+//单机游戏
+
+if (sid == 63) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1792c2e070cf186cf729960b5b20930c";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+
+
+//Flash小游戏
+
+if (sid == 1490) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b0e05649c868ecb35eccb6a04568ce2d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+
+
+//应用电脑板
+
+if (sid == 1514) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6c06fc869490aefafa37184f864846b9";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+
+
+//单机小游戏
+
+if (sid == 64) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e842d91c3782f78c7543a422e438885b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+
+
+//安卓游戏
+
+if (sid == 70) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8e9ba35d711e4ef6654497df426c5470";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+
+
+//安卓应用
+
+if (sid == 71) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c6a8d1f18d9111f8a25339868a38870f";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+
+
+//安卓网游
+
+if (sid == 72) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?bd7a41e456fa576d6289634ec4d42ec3";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+//安卓tv
+
+if (sid == 1521) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ecb9175779f15b69280ec76daec8fee0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+
+//安卓街机
+
+if (sid == 1735) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4c7ff1373115a949d272b9f31c6e6b17";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+
+}
+
+
+
+//苹果单机
+if (sid == 1378) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9ec2d2db1ba0ac0b6754488c0574b8de";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+}
+
+//苹果网游
+if (sid == 1377) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?690e680aa72fe90819dd66052fa3eced";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+}
+ 
+
+//苹果应用
+if (sid == 1376) {
+
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6a2da519135cfcc009478685a75d378e";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+}

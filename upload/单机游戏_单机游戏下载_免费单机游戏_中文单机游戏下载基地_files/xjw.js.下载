@@ -1,0 +1,179 @@
+// getbyclass
+function getByClass(oParent, sClass) {
+    var aEle = oParent.getElementsByTagName('*');
+    var re = new RegExp('\\b' + sClass + '\\b');
+
+    var aResult = [];
+
+    for (var i = 0; i < aEle.length; i++) {
+        if (re.test(aEle[i].className)) {
+            aResult.push(aEle[i]);
+        }
+    }
+
+    return aResult;
+}
+// addclass
+function hasClass(obj, sClass) {
+    var re = new RegExp("\\b" + sClass + "\\b");
+    return re.test(obj.className);
+}
+// addClass
+function addClass(obj, sClass) {
+    if (obj.className == "") {
+        obj.className = sClass;
+        return;
+    }
+
+    var re = new RegExp("(^|\\s+)" + sClass + "($|\\s+)");
+
+    if (!re.test(obj.className)) {
+        obj.className += " " + sClass;
+    }
+}
+// removeClass
+function removeClass(obj, sClass) {
+        var re = new RegExp("(^|\\s+)" + sClass + "\\b");
+        obj.className = obj.className.replace(re, "");
+    }
+// getStyle
+function getStyle(obj, name) {
+    if (obj.currentStyle) {
+        return obj.currentStyle[name];
+    } else {
+        return getComputedStyle(obj, false)[name];
+    }
+}
+// move
+function startMove(obj, json, fnEnd, fast) {
+    clearInterval(obj.timer);
+    obj.timer = setInterval(function() {
+        var arrived = true;
+
+        for (var name in json) {
+            if (name == 'opacity') {
+                var cur = Math.round(parseFloat(getStyle(obj, name)) * 100);
+            } else {
+                var cur = parseInt(getStyle(obj, name));
+            }
+
+            var speed = (json[name] - cur) / fast;
+            speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+            if (name == 'opacity') {
+                obj.style.filter = 'alpha(opacity:' + (cur + speed) + ')';
+                obj.style.opacity = (cur + speed) / 100;
+            } else {
+                obj.style[name] = cur + speed + 'px';
+            }
+
+            if (cur != json[name]) {
+                arrived = false;
+            }
+        }
+
+        if (arrived == true) {
+            clearInterval(obj.timer);
+            fnEnd && fnEnd();
+        }
+    }, 30);
+}
+// 滚轮
+function addWheel(obj, fnWheel) {
+    //1.DOM事件只能绑定
+    if (window.navigator.userAgent.indexOf('Firefox') != -1) {
+        obj.addEventListener('DOMMouseScroll', fn, false);
+    } else {
+        obj.onmousewheel = fn;
+    }
+
+    function fn(ev) {
+        var oEvent = ev || event;
+
+        var down = true;
+
+        if (oEvent.detail) {
+            down = oEvent.detail > 0;
+        } else {
+            down = oEvent.wheelDelta < 0;
+        }
+
+        fnWheel(down);
+
+        if (oEvent.preventDefault) {
+            oEvent.preventDefault();
+        }
+
+        return false;
+    }
+}
+// show切换
+function add_show(aTab, aCont) {
+    for (var i = 0; i < aTab.length; i++) {
+        aTab[i].index = i;
+        aTab[i].onmouseover = function() {
+            for (var i = 0; i < aTab.length; i++) {
+                removeClass(aTab[i], 'active');
+                removeClass(aCont[i], 'show');
+            }
+            addClass(this, 'active');
+            addClass(aCont[this.index], 'show');
+        };
+    }
+}
+// show click切换
+function add_show_click(aTab, aCont) {
+    for (var i = 0; i < aTab.length; i++) {
+        aTab[i].index = i;
+        aTab[i].onclick = function() {
+            for (var i = 0; i < aTab.length; i++) {
+                removeClass(aTab[i], 'active');
+                removeClass(aCont[i], 'show');
+            }
+            addClass(this, 'active');
+            addClass(aCont[this.index], 'show');
+        };
+    }
+}
+// active切换
+function add_active(obj) {
+    for (var i = 0; i < obj.length; i++) {
+        obj[i].onmouseover = function() {
+            for (var i = 0; i < obj.length; i++) {
+                removeClass(obj[i], 'active');
+            }
+            addClass(this, 'active');
+        }
+    }
+}
+// active click切换
+function add_active_click(obj) {
+    for (var i = 0; i < obj.length; i++) {
+        obj[i].onclick = function() {
+            for (var i = 0; i < obj.length; i++) {
+                removeClass(obj[i], 'active');
+            }
+            addClass(this, 'active');
+        }
+    }
+}
+// 计算textarea字数
+function countChar(obj, max, v) {
+    var reg = /[^x00-xff]/gm;
+    var str = obj.value.replace(reg, 'aa'); //全换成单字节字符计算
+    var v = document.getElementById(v);
+
+    if (str.length > max) {
+        var n = 0,
+            strr = [];
+        for (var i = 0; i < obj.value.length; i++) { //得到50字节以内的字符
+            /[^x00-xff]/.test(obj.value.charAt(i)) ? n += 2 : n += 1;
+            if (n > max) break;
+            strr.push(obj.value.charAt(i));
+        }
+        obj.value = strr.join('');
+        v.innerHTML = 0;
+    } else {
+        v.innerHTML = max - str.length;
+    }
+}
