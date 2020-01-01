@@ -5,7 +5,7 @@
 body,
 html {
     background-color: #eee;
-    height: 10000px;
+
 }
 
 header {
@@ -536,4 +536,257 @@ button {
     content: "领取";
     height: 30px;
     line-height: 30px;
+}
+
+/* 教程  攻略 */
+.strategy{
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.strategy-title{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 2%;
+
+}
+.strategy-title-left{
+    float: left;
+    width: 50%;
+}
+.strategy-title-right{
+    float: right;
+    width: 50%;
+}
+.strategy-title span{
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    background-image: url(../image/icon.png);
+    background-repeat: no-repeat;
+    background-position: 0 -295px;
+    padding-left: 18px;
+    
+}
+.strategy-title div:hover{
+    border-bottom: 3px solid #ff9500;
+    color: #ff9500;
+}
+.strategy-centent{
+    width: 100%;
+    overflow: hidden;
+}
+.strategy-centent a{
+    display: block;
+}
+.strategy-centent img{
+    width: 110px;
+    height: 70px;
+}
+.strategy-centent a:first-child{
+  float: left;
+  width: 110px;
+  margin-right: 10px;
+}
+
+.strategy-centent h3{
+font-size: 16px;
+height: 28px;
+line-height: 28px;
+color: #888;
+font-weight: normal;
+overflow:hidden;
+}
+.strategy-centent p{
+    font-size: 12px;
+    height: 40px;
+    line-height: 20px;
+    color: #888;
+    overflow: hidden;
+}
+.strategy-centent-left,
+.strategy-centent-right{
+    overflow: hidden;
+    padding: 10px 2%;
+}
+.strategy-centent-right{
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.strategy-list{
+    width: 100%;
+    background-color: #fff;
+}
+.strategy-list ul{
+    width: 100%;
+    line-height: 41px;
+    font-size: 14px;
+}
+.strategy-list li{
+    width: 100%;
+    height: 41px;
+    border-top: 1px solid #ccc;
+    padding: 0 2%;
+}
+.strategy-list li:last-child{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+
+}
+.strategy-list a{
+    display: inline-block;
+    color: #333;
+    margin-left: 10px;
+}
+.strategy-list span{
+    color: #ff9500;
+}
+
+.ranking{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.ranking .hot-title{
+    background-color: #fff;
+}
+.ranking .hot-title-right span:first-child{
+    background-image: url(../image/bj-3.png);
+}
+.ranking .hot-title-right span:nth-child(2){
+    background-image: url(../image/bj-4.png);
+}
+.bor-three div:first-child{
+    border-top: none;
+}
+
+.phone-game{
+    width: 100%;
+    background-color: #fff;
+}
+.phone-game .hot-title span:first-child{
+    background-image: url(../image/bj-5.png);
+}
+.phone-game .hot-title span:nth-child(2){
+    background-image: url(../image/bj-6.png);
+}
+
+.label{
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px;
+}
+.label-list{
+    width: 100%;
+
+
+}
+.label-list ul{
+    width: 96%;
+    margin: 10px auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.label-list li{
+    float: left;
+    width: calc(25% - 10px);
+    height: 28px;
+
+
+    margin:5px;
+    text-align: center;
+    line-height: 28px;
+
+    font-size: 14px;
+}
+.label-list li:first-child a{
+    background-color: #1AE18F;
+    color: #fff;
+}
+.label-list li:nth-child(6) a{
+    background-color: #EB4040;
+    color: #fff;
+}
+.label-list li:nth-child(8) a{
+    background-color: #5A5EEB;
+    color: #fff;
+}
+.label-list li:nth-child(12) a{
+    background-color: #FF9500;
+    color: #fff;
+}
+.label-list li:nth-child(13) a{
+    background-color: #EE6123;
+    color: #fff;
+}
+.label-list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #666;
+    border-radius: 10px;
+    background-color: #ebebeb;
+}
+
+.link{
+    width: 100%;
+    background-color: #fff;
+}
+.link-centent{
+    width: 96%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.link-centent a{
+    display: inline-block;
+    color: #000;
+    font-size: 14px;
+    margin: 5px;
+    margin-left: 0;
+}
+footer{
+    padding: 10px 0;
+height: 78px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 20px;
+}
+footer>a{
+    float: left;
+    width: 15%;
+    padding-top:30px;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+}
+footer>a:first-child{
+    background-image: url(../image/bj-7.png);
+    background-repeat: no-repeat;
+    background-position:center 10px;
+}
+footer>a:nth-child(3){
+    background-image: url(../image/bj-8.png);
+    background-repeat: no-repeat;
+    background-position:center 10px;
+    color: #007eff;
+}
+footer div{
+    float: left;
+    width: 70%;
+    height: 100%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    line-height: 58px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 58px;
+}
+footer div a{
+    padding: 0 10%;
+    color: #000;
 }
