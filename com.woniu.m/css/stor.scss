@@ -1,0 +1,371 @@
+
+.topnav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: (100rem / 75);
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "microsoft yahei";
+    z-index: 1;
+
+    img {
+        float: left;
+        width: (120rem / 75);
+        height: (120rem / 75);
+        margin-left: (20rem / 75);
+        margin-top: (9rem / 75);
+    }
+
+    h2 {
+        position: absolute;
+        top: (12rem / 75);
+        left: (160rem / 75);
+        color: #fff;
+        font-size: (40rem / 75);
+        font-weight: 700;
+    }
+
+    h3 {
+        position: absolute;
+        bottom: (10rem / 75);
+        left: (160rem / 75);
+        color: #fff;
+        font-size: (26rem / 75);
+        opacity: 0.7;
+    }
+
+    span {
+        position: absolute;
+        top: (30rem / 75);
+        right: (36rem / 75);
+        width: (36rem / 75);
+        height: (36rem / 75);
+
+        i {
+            display: block;
+            width: (44rem / 75);
+            height: (6rem / 75);
+            background-color: #fff;
+            margin-top: (10rem / 75);
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:nth-child(2) {
+                height: (4rem / 75);
+            }
+        }
+    }
+}
+
+.bg {
+    position: relative;
+    height: (1100rem / 75);
+    background-image: url(../unplad/bg1.jpg);
+    background-size: (750rem / 75) (1100rem / 75);
+
+    a {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: (130rem / 75);
+        margin: auto;
+        width: (370rem / 75);
+        height: (84rem / 75);
+        background-image: url(../unplad/btn-dl.png);
+        background-size: (370rem / 75)(84rem / 75);
+    }
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: (928rem /75);
+    padding: (50rem / 75) 0 (118rem / 75);
+    overflow-x: scroll;
+    box-sizing: border-box;
+
+    ul {
+        width: 500%;
+        position: absolute;
+        left: (-350rem / 75);
+        overflow: hidden;
+
+        li {
+            float: left;
+            width: (500rem / 75);
+            height: (760rem / 75);
+            background-image: url(../unplad/1.jpg);
+            background-size: ((500rem / 75) (760rem / 75));
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .banner-i {
+        position: absolute;
+        left: (280rem / 75);
+        bottom: (50rem / 75);
+        width: (200rem / 75);
+        height: (28rem / 75);
+
+        span {
+            display: inline-block;
+            width: (28rem / 75);
+            height: (28rem / 75);
+            background-color: #c2c2c2;
+            border-radius: (14rem / 75);
+
+            &:hover {
+                width: (38rem / 75);
+                background-color: #cda25f;
+            }
+        }
+    }
+}
+
+.swiperbox {
+    width: 100%;
+    height: （500rem/ 75;
+    background-color: #f0f4f5;
+    padding-top: (40rem / 75);
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.news-nav {
+    width: 100%;
+    height: (80rem / 75);
+    background-color: #f0f4f5;
+
+    ul {
+        height: 100%;
+        padding: 0 (20rem / 75);
+        overflow: hidden;
+
+        li {
+            float: left;
+            width: 25%;
+            height: 100%;
+            text-align: center;
+            line-height: (80rem / 75);
+            border-bottom: 4px solid #ddd;
+            box-sizing: border-box;
+
+            &:hover {
+                border-bottom: 4px solid #cda25f;
+                color: #cda25f;
+            }
+        }
+    }
+}
+
+.news-content {
+    width: 100%;
+    background-color: #f0f4f5;
+    padding: (26rem / 75) (20rem / 75) 0;
+    box-sizing: border-box;
+
+    .new-content-one {
+        a {
+            display: block;
+            width: 100%;
+            background-color: #fff;
+            padding: 0 (20rem / 75);
+            border-bottom: 4px solid #cda25f;
+            box-sizing: border-box;
+
+            h2 {
+                width: 100%;
+                height: (86rem / 75);
+                font-size: (32rem / 75);
+                border-bottom: 1px solid #ddd;
+                color: #cda25f;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                background: none;
+                font-weight: 600;
+                padding-top: (37rem / 75);
+                box-sizing: border-box;
+            }
+
+            p {
+                color: #666;
+                line-height: (36rem / 75);
+                margin-top: (16rem / 75);
+            }
+
+            .date {
+                overflow: hidden;
+                margin-top: (20rem / 75);
+                padding-bottom: (50rem / 75);
+
+                span {
+                    color: #666;
+
+                    &:first-child {
+                        float: left;
+                    }
+
+                    &:nth-child(2) {
+                        float: right;
+                        margin-right: (20rem/ 75);
+                    }
+                }
+            }
+        }
+    }
+
+    .new-list {
+        width: 100%;
+        margin-top: (20rem / 75);
+        overflow: hidden;
+
+        ul {
+            width: 100%;
+            border-bottom: 4px solid #cda25f;
+            box-sizing: border-box;
+
+            li {
+                width: 100%;
+                height: (100rem / 75);
+                background-color: #fff;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    line-height: (100rem / 75);
+                    color: #666;
+                    padding: 0 (20rem / 75);
+                    border-bottom: 1px solid #ccc;
+                    box-sizing: border-box;
+                    overflow: hidden;
+
+                    p {
+                        float: left;
+                        height: 100%;
+                    }
+
+                    span {
+                        float: right;
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.more {
+    width: 100%;
+    padding: (28rem / 75) (20rem / 75) (40rem / 75);
+    background-color: #f0f4f5;
+    box-sizing: border-box;
+
+    a {
+        display: block;
+        height: (86rem / 75);
+        background-color: #e3e3e3;
+        text-align: center;
+        line-height: (86rem / 75);
+        color: #999;
+    }
+}
+
+.last {
+    width: 100%;
+    height: (1234rem / 75);
+    background-image: url(../unplad/footer-sns-bg.jpg);
+    background-size: (750rem / 75) (1234rem / 75);
+    overflow: hidden;
+    text-align: center;
+
+    p {
+        margin-top: (136rem / 75);
+        color: #4e2613;
+    }
+
+    img {
+        width: (280rem / 75);
+        height: (280rem / 75);
+        margin-top: (20rem / 75);
+    }
+
+    h2 {
+        color: #966816;
+        font-size: (32rem / 75);
+        margin-top: (18rem / 75);
+    }
+
+    h3 {
+        color: #4e2613;
+        line-height: (40rem / 75);
+    }
+
+    .contact {
+        width: 100%;
+        margin-top: (60rem / 75);
+
+        a {
+            position: relative;
+            display: inline-block;
+            width: (100rem / 75);
+            height: (150rem / 75);
+            margin-right: (100rem / 75);
+            background-size: (100rem / 75);
+            background-repeat: no-repeat;
+
+            &:first-child {
+                background-image: url(../image/tieba.png);
+            }
+
+            &:nth-child(2) {
+                background-image: url(../image/sina.png);
+            }
+
+            &:last-child {
+                margin-right: 0;
+                background-image: url(../image/qqgroup.png);
+            }
+
+            span {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                color: #333;
+            }
+        }
+    }
+    .share{
+        width: 100%;
+        a{
+            display: inline-block;
+            width: (440rem / 75);
+            height: (110rem / 75);
+            border: 2px solid #cda25f;
+            border-radius: (60rem / 75);
+            margin-top: (70rem / 75);
+            line-height: (110rem / 75);
+            color: #4e2613;
+            font-size: (30rem / 75);
+        }
+    }
+}
+footer {
+    height: (160rem / 75);
+    background: #1c1d22;
+    text-align: center;
+    overflow: hidden;
+    padding-top: (20rem / 75);
+    p {
+      line-height: 1.8 ;
+      color: #656668;
+      margin-top: (10rem / 75);
+    }
+  }
