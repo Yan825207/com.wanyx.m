@@ -15,10 +15,11 @@
 header {
   width: 100%;
   height: (100rem / 75);
-
-  a {
+  overflow: hidden;
+  >a {
     display: inline-block;
     background-image: url(../image/logo.png);
+    background-repeat: no-repeat;
     width: (182rem / 75);
     height: (68rem / 75);
     background-size: ((182rem / 75) (68rem / 75));
@@ -31,9 +32,45 @@ header {
     width: (38rem / 75);
     height: (32rem / 75);
     background-image: url(../image/menu.png);
+    background-repeat: no-repeat;
     background-size: ((38rem / 75) (32rem / 75));
     margin-top: (40rem / 75);
     margin-right: (40rem / 75);
+    &:hover .menu{
+      display: block;
+    } 
+  }
+  .menu{
+    display: none;
+    position: absolute;
+    top: (100rem / 75);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    line-height: (160rem /75);
+    background: rgba(255,255,255,0.9);
+    ul{
+      width: 100%;
+      li{
+        width: 100%;
+        height: (150rem / 75);
+        background-image: url(../image/border-bottom.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: (750rem / 75)(2rem / 75);
+        &:last-child{
+            background-image: none;
+        }
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: #000;
+        }
+      }
+    }
   }
 }
 
@@ -208,8 +245,6 @@ header {
     li {
       float: left;
       width: 25%;
-
-      // @include mar();
       a {
         display: block;
         padding: 0 (40rem / 75);
