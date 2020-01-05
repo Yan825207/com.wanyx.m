@@ -1,0 +1,102 @@
+.title{
+    width: 100%;
+    height: (88rem / 75);
+    background-color: #f6f6f6;
+    img{
+        position: absolute;
+        top: (20rem / 75);
+        left: (40rem / 75);
+        width: (21rem  / 75);
+        height: (40rem / 75);
+    }
+    h2{
+        text-align: center;
+        font-size: (36rem / 75);
+        line-height: (88rem/  75);
+    }
+}
+main{
+    padding: (50rem / 75);
+    width: 100%;
+    box-sizing: border-box;
+    .one{
+        display: flex;
+        width: 100%;
+        height: (104rem / 75);
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-bottom: (40rem / 75);
+        border-radius: 5px;
+        &:nth-child(2) .bg,
+        &:nth-child(3) .bg{
+            background-position: (-165rem / 75) 0;
+
+        }
+        &:nth-child(4) .bg{
+            background-position: (-250rem / 75) 0;
+        }
+        .bg{
+            float: left;
+            width:(80rem / 75);
+            height: (80rem / 75);
+            background-image: url(../image/icon.png);
+            background-size: (400rem / 75)(160rem / 75);
+            background-position: (-85rem / 75) 0;
+            margin-top: (10rem / 75);
+        }
+        input{
+            flex: 1;
+            border: none;
+        }
+        
+    }
+}
+.yzm{
+    overflow: hidden;
+    margin-bottom: (40rem / 75);
+    .two{
+        float: left;
+        width: 37%;
+        height: (104rem / 75);
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 5px;
+        .bj{
+            float: left;
+            width:(80rem / 75);
+            height: (80rem / 75);
+            background-image: url(../image/icon.png);
+            background-size: (400rem / 75)(160rem / 75);
+            background-position: (-85rem / 75) 0;
+            margin-top: (10rem / 75);
+        }
+        input{
+            float: left;
+            width: 66%;
+            height: 100%;
+            border: none;
+        }
+    }
+    img{
+        float: right;
+        width: (300rem / 75);
+        height:(108rem / 75);
+    }
+}
+h3{
+    font-size: (28rem / 75);
+    margin-bottom: (40rem / 75);
+    a{
+        color: #09f;
+    }
+}
+.zc{
+    width: 100%;
+    height: (100rem / 75);
+    text-align: center;
+    line-height: (100rem / 75);
+    font-size: (32rem / 75);
+    background-color: #f18800;
+    border-radius: 5px;
+    color: #fff;
+}
