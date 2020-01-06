@@ -64,7 +64,7 @@
     height: (1100rem / 75);
     background-image: url(../unplad/bg1.jpg);
     background-size: (750rem / 75) (1100rem / 75);
-
+    background-repeat: no-repeat;
     a {
         position: absolute;
         left: 0;
@@ -282,6 +282,7 @@
     width: 100%;
     height: (1234rem / 75);
     background-image: url(../unplad/footer-sns-bg.jpg);
+    background-repeat: no-repeat;
     background-size: (750rem / 75) (1234rem / 75);
     overflow: hidden;
     text-align: center;
