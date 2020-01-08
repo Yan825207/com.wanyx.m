@@ -425,7 +425,7 @@ button {
     color:#ff9500;
 }
 .hot-title-right span:first-child{
-    background: url(../image/bj-1.png) no-repeat 10px 6px;
+    background: url(../image/bj-2-1.png) no-repeat 10px 6px;
 }
 .hot-title-right span:nth-child(2){
     background: url(../image/bj-2.png) no-repeat 10px 6px;
@@ -566,7 +566,7 @@ button {
     font-size: 16px;
     height: 40px;
     line-height: 40px;
-    background-image: url(../image/icon.png);
+    background-image: url(../image/icon-2.png);
     background-repeat: no-repeat;
     background-position: 0 -295px;
     padding-left: 18px;
